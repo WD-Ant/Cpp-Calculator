@@ -1,0 +1,54 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+   
+ double num1, num2;
+ double num1v2; // number 1, version 2 
+     double sqAr; // square root answer 
+ double anR; // answer for all other operators 
+ 
+ string opC; // operation(s) 
+ 
+ 
+cout << "Operator: ";
+ cin >> opC;
+ 
+ if(opC == "sqrt"){
+    cout << "Enter a single number: ";
+    cin >> num1v2;
+   sqAr = sqrt(num1v2);
+   
+   cout << "The answer is: " << sqAr << '\n'; }
+  
+  else {
+    
+    cout << "First number: ";
+ cin >> num1;
+ cout << "Second number: ";
+ cin >> num2;
+ 
+     if(opC == "+") {
+   anR = num1 + num2;
+ }
+ else if(opC == "-"){
+   anR = num1 - num2;
+ }
+ else if(opC == "*"){
+   anR = num1 * num2;
+ }
+ else if(opC == "/"){
+   anR = num1 / num2;
+ }
+ else if(opC == "^"){
+   anR = pow(num1, num2);
+ }
+ else {
+   cout << "Not an operator, invalid expression.";
+ }
+    cout << "The answer is: " << anR << '\n';
+  }
+  
+    return 0;
+} 
